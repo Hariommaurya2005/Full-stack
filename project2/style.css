@@ -1,0 +1,60 @@
+@font-face {
+    font-family: f1;
+    src: url(../Frost\ Scream.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', cursive;
+    background: url('../Gemini_Generated_Image_dpqas8dpqas8dpqa.png') no-repeat bottom center/cover;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container {
+    text-align: center;
+    color:red;
+    margin-top: 80PX;
+}
+
+h1 {
+    font-family: f1;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px black;
+}
+
+.highlight {
+    color: #ffd700;
+    
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: #ff5722;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}

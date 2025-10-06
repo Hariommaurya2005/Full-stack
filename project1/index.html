@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Resume Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-blue"> <!-- Default theme: Blue -->
+
+  <header class="hero">
+    <div class="container">
+      <h1 class="name">SARTHAK SHARMA</h1>
+      <p class="tagline">Web Developer | Designer | Learner</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ABOUT ME -->
+    <section>
+      <h2 class="section-title">ABOUT ME</h2>
+      <div class="card intro">
+        <p>
+          Hello! I am learning HTML and CSS. This is my resume-style webpage where I practice
+          text styling, colors, backgrounds, and fonts. My goal is to become an expert web developer and designer.
+        </p>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2 class="section-title">EDUCATION</h2>
+      <div class="wrap blue">
+        <div class="grid">
+          <div class="col-12 edu-item">B.Tech in Computer Science – RGPV<div class="edu-meta">2022 – Present</div></div>
+          <div class="col-12 edu-item">Higher Secondary – XYZ School<div class="edu-meta">Completed 2021</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2 class="section-title">SKILLS</h2>
+      <div class="wrap yellow">
+        <div class="card">
+          <div class="badges">
+            <span class="badge">HTML5</span>
+            <span class="badge">CSS3</span>
+            <span class="badge">Responsive Design</span>
+            <span class="badge">Git & GitHub</span>
+            <span class="badge">Figma</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2 class="section-title">PROJECTS</h2>
+      <div class="wrap green">
+        <div class="projects">
+          <article class="card project">
+            <h3 class="title">Portfolio Landing Page</h3>
+            <p>A clean, responsive landing page built with semantic HTML and modern CSS layout techniques.</p>
+          </article>
+          <article class="card project">
+            <h3 class="title">CSS Components Library</h3>
+            <p>A small set of reusable cards, badges, and buttons to speed up prototyping.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <h2 class="section-title">CONTACT</h2>
+      <div class="card">
+        <div class="contact-list">
+          <div class="contact-item">Email: <a href="mailto:sarthak@example.com">sarthak@example.com</a></div>
+          <div class="contact-item">GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></div>
+          <div class="contact-item">LinkedIn: <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Sarthak Sharma • All rights reserved
+  </footer>
+
+  <div class="theme-toggle">
+    <button onclick="setTheme('blue')">Blue Theme</button>
+    <button onclick="setTheme('green')">Green Theme</button>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    function setTheme(theme) {
+      document.body.className = 'theme-' + theme;
+    }
+  </script>
+</body>
+</html>
