@@ -1,0 +1,108 @@
+/* 🔹 Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 Page Setup */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', cursive;
+    background-color: rgba(0, 0, 0, 0.493);
+}
+
+/* 🔹 Header */
+.head {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* 🔹 Main Container */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+/* 🔹 Card Container */
+.first {
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    background: #000;
+    transition: transform 0.3s ease;
+}
+
+.first:hover {
+    transform: translateY(-10px);
+}
+
+/* 🔹 Image Styling */
+.first img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+/* 🔹 Overlay (Initially Hidden) */
+.child {
+    position: absolute;
+    bottom: -100%; /* Hidden below */
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    transition: bottom 0.5s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+/* 🔹 Icon + Text Inside Overlay */
+.icon {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+i {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+h2 {
+    color: white;
+    font-size: 26px;
+}
+
+/* 🔹 Hover Effects */
+.first:hover img {
+    transform: scale(1.1);
+}
+
+.first:hover .child {
+    bottom: 0;          /* Slide up from bottom */
+    opacity: 1;         /* Fade in */
+}
+
+.first:hover i {
+    transform: scale(1.2);
+}
