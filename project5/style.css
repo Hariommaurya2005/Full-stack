@@ -8,4 +8,38 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: "Poppins", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 8px;
+}
+main section {
+  flex-grow: 1;
+  height: 100%;
+  border: 2px solid whitesmoke;
+  background-color: teal;
+  background-size: cover;
+  background-position: center;
+}
+main section:hover {
+  flex-grow: 2;
+  transition: all 0.8s ease-in-out;
+}
+main section:nth-child(1) {
+  background-image: url(../photo/4f604514-b1d0-4f90-a2c4-c44135081991.jpg);
+}
+main section:nth-child(2) {
+  background-image: url(../photo/67fa1230-3e80-4522-a06c-c33b28da6181.jpg);
+}
+main section:nth-child(3) {
+  background-image: url(../photo/d5d74c9e-24fd-406e-ae31-950cab1c42c9.jpg);
+}
+main section:nth-child(4) {
+  background-image: url(../photo/e8a6eb7a-46cc-4b28-a693-36458adc8a71.jpg);
+}
+main section:nth-child(5) {
+  background-image: url(../photo/this\ is\ not\ the\ original\ but\ I\ edited\ it\ a\ little.jpg);
 }/*# sourceMappingURL=style.css.map */
