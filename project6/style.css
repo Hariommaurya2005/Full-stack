@@ -116,11 +116,11 @@ body {
      object-fit: cover;
 }
 .grid .woman img {
-  height: 95%;
+  height: 100%;
   margin-bottom: 8px;
 }
 .grid .woman p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   text-align: center;
   color: #333;
 }
