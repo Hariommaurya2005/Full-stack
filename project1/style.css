@@ -7,8 +7,6 @@
   --radius: 16px;
   --shadow: 0 2px 8px rgba(16,19,26,.08), 0 12px 24px rgba(16,19,26,.06);
 }
-
-/* THEMES */
 body.theme-blue {
   --brand: #14233a;
   --brand-2: #1f2f4a;

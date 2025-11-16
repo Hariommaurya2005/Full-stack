@@ -1,0 +1,47 @@
+@font-face {
+    font-family: f1;
+    src: url(../Frost\ Scream.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#First{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box{
+    width: 400px;
+    height: 400px;
+   background: rgb(0, 0, 0);
+    border-radius: 1rem;
+}
+#btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 2rem;
+    font-size: 2rem;
+    padding: 5px;
+    font-weight: 800;
+    color: white;
+    background-color: rgb(226, 68, 187);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.1s ease;
+    box-shadow: 0 1px 0 rgb(180, 0, 120); 
+}
+
+#btn:active {
+    transform: translateY(4px);    
+    box-shadow: 0 1px 0 rgb(180, 0, 120); 
+}
