@@ -20,7 +20,7 @@ btn.addEventListener('click',function(){
     h1.style.left = x+'%'
     h1.style.top = y+'%'
     h1.style.rotate = rot+'deg'
-    h1.style.scale = scl
+    h1.style.scale = scl;
     
     main.appendChild(h1)
 })
