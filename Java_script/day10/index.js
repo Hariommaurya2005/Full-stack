@@ -3,7 +3,7 @@ let reelsData = [
         video: "3704195-uhd_2160_4096_25fps.mp4",
         profile: "https://i.pravatar.cc/150?img=8",
         username: "sarthack.sharma",
-        caption: "E-commerce Changes: Adapting to the Future #shorts",
+        caption: "E-commerce Changes: Adapting to the Future #short",
         likes: 2875,
         comments: 320,
         shares: 42,
