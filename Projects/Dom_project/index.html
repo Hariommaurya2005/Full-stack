@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <button id="themeBtn">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <h1><i class="fas fa-rocket"></i> Productivity</h1>
+            <div class="nav-date">
+                <span id="currentDate"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div id="main">
+        <!-- Dashboard Cards -->
+        <section class="allElems">
+            <div class="todo elem" id="1">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="To Do List">
+                <h1><i class="fas fa-tasks"></i> To Do List</h1>
+                <div class="card-badge">Organize Tasks</div>
+            </div>
+
+            <div class="daily elem" id="2">
+                <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Daily Planner">
+                <h1><i class="fas fa-calendar-day"></i> Daily Planner</h1>
+                <div class="card-badge">Plan Your Day</div>
+            </div>
+
+            <div class="motivation elem" id="3">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Motivation">
+                <h1><i class="fas fa-brain"></i> Motivation</h1>
+                <div class="card-badge">Get Inspired</div>
+            </div>
+
+            <div class="pomodoro elem" id="4">
+                <img src="https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pomodoro Timer">
+                <h1><i class="fas fa-clock"></i> Pomodoro Timer</h1>
+                <div class="card-badge">Stay Focused</div>
+            </div>
+
+            <div class="goals elem" id="5">
+                <img src="https://images.unsplash.com/photo-1536922246289-88c42f957773?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Daily Goals">
+                <h1><i class="fas fa-bullseye"></i> Daily Goals</h1>
+                <div class="card-badge">Achieve More</div>
+            </div>
+        </section>
+
+        <!-- Full Page Sections -->
+        
+        <!-- To Do List Section -->
+        <section class="fullElems todoPage">
+            <button class="close"><i class="fas fa-times"></i> Close</button>
+            
+            <div class="todoWrapper">
+                <!-- LEFT SIDE: Add Task -->
+                <div class="todoLeft">
+                    <h2><i class="fas fa-plus-circle"></i> Add New Task</h2>
+                    
+                    <form class="todoForm">
+                        <label>Task Title</label>
+                        <input type="text" id="taskTitle" placeholder="Enter task title" required>
+                        
+                        <label>Description</label>
+                        <textarea id="taskDesc" placeholder="Write task details..."></textarea>
+                        
+                        <label>Priority</label>
+                        <select id="taskPriority">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                        
+                        <div class="form-buttons">
+                            <button type="submit" id="saveTaskBtn"><i class="fas fa-save"></i> Save Task</button>
+                            <button type="button" id="clearTasksBtn"><i class="fas fa-trash"></i> Clear All</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- RIGHT SIDE: Display Tasks -->
+                <div class="todoRight">
+                    <h2><i class="fas fa-list-check"></i> Your Tasks <span class="task-count">(3)</span></h2>
+                    
+                    <div class="task-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="pending">Pending</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                    
+                    <ul class="todoList">
+                        <!-- Tasks will be added here by JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Planner Section -->
+        <section class="fullElems dailyPage">
+            <button class="close"><i class="fas fa-times"></i> Close</button>
+            
+            <div class="dailyWrapper">
+                <h2><i class="fas fa-calendar-day"></i> Daily Planner</h2>
+                <p class="subtitle">Plan your day hour by hour</p>
+                
+                <div class="current-time">
+                    <h3 id="currentTime">Current Time: Loading...</h3>
+                </div>
+                
+                <div class="planner-container">
+                    <!-- Planner hours will be generated by JavaScript -->
+                </div>
+                
+                <div class="planner-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="plannedHours">0</span>
+                        <span class="stat-label">Hours Planned</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="completedHours">0</span>
+                        <span class="stat-label">Completed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="remainingHours">0</span>
+                        <span class="stat-label">Remaining</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Motivation Section -->
+        <section class="fullElems motivationPage">
+            <button class="close"><i class="fas fa-times"></i> Close</button>
+            
+            <div class="motivationBg"></div>
+            
+            <div class="motivationHero">
+                <span class="badge"><i class="fas fa-fire"></i> Daily Motivation</span>
+                
+                <h1 class="mainTitle">
+                    One Thought Can<br>
+                    Change Your Day
+                </h1>
+                
+                <div class="quoteCard">
+                    <p class="quote">
+                        "Your motivation will appear here from the API."
+                    </p>
+                    <span class="author">— Author Name</span>
+                </div>
+                
+                <div class="motivation-controls">
+                    <button id="newQuoteBtn"><i class="fas fa-refresh"></i> New Quote</button>
+                    <button id="saveQuoteBtn"><i class="fas fa-bookmark"></i> Save Quote</button>
+                    <button id="viewSavedBtn"><i class="fas fa-book"></i> Saved Quotes</button>
+                </div>
+                
+                <p class="hint">
+                    <i class="fas fa-lightbulb"></i> Today's Motivation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Pomodoro Timer Section -->
+        <section class="fullElems pomodoroPage">
+            <button class="close"><i class="fas fa-times"></i> Close</button>
+            
+            <div class="pomodoroWrapper">
+                <h2><i class="fas fa-clock"></i> Pomodoro Timer</h2>
+                <p class="subtitle">Focus for 25 minutes, break for 5 minutes</p>
+                
+                <div class="timer-container">
+                    <div class="timer-display">
+                        <div class="time" id="timerDisplay">25:00</div>
+                        <div class="timer-status" id="timerStatus">Ready to Start</div>
+                    </div>
+                    
+                    <div class="timer-controls">
+                        <button id="startTimerBtn"><i class="fas fa-play"></i> Start</button>
+                        <button id="pauseTimerBtn" disabled><i class="fas fa-pause"></i> Pause</button>
+                        <button id="resetTimerBtn"><i class="fas fa-redo"></i> Reset</button>
+                    </div>
+                    
+                    <div class="timer-modes">
+                        <button class="mode-btn active" data-time="25">Focus (25 min)</button>
+                        <button class="mode-btn" data-time="5">Short Break (5 min)</button>
+                        <button class="mode-btn" data-time="15">Long Break (15 min)</button>
+                    </div>
+                    
+                    <div class="timer-stats">
+                        <div class="stat">
+                            <span class="stat-value" id="pomodoroCount">0</span>
+                            <span class="stat-label">Pomodoros Today</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="focusTime">0 min</span>
+                            <span class="stat-label">Total Focus Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Goals Section -->
+        <section class="fullElems goalsPage">
+            <button class="close"><i class="fas fa-times"></i> Close</button>
+            
+            <div class="goalsWrapper">
+                <h2><i class="fas fa-bullseye"></i> Daily Goals</h2>
+                <p class="subtitle">Set and track your daily objectives</p>
+                
+                <div class="goals-container">
+                    <div class="goals-left">
+                        <h3>Add New Goal</h3>
+                        <form class="goalForm">
+                            <input type="text" id="goalTitle" placeholder="What do you want to achieve today?" required>
+                            <textarea id="goalDesc" placeholder="Add details (optional)"></textarea>
+                            
+                            <label>Goal Category</label>
+                            <div class="category-select">
+                                <label class="category-option">
+                                    <input type="radio" name="category" value="work" checked>
+                                    <span class="category-badge work"><i class="fas fa-briefcase"></i> Work</span>
+                                </label>
+                                <label class="category-option">
+                                    <input type="radio" name="category" value="health">
+                                    <span class="category-badge health"><i class="fas fa-heartbeat"></i> Health</span>
+                                </label>
+                                <label class="category-option">
+                                    <input type="radio" name="category" value="learning">
+                                    <span class="category-badge learning"><i class="fas fa-graduation-cap"></i> Learning</span>
+                                </label>
+                                <label class="category-option">
+                                    <input type="radio" name="category" value="personal">
+                                    <span class="category-badge personal"><i class="fas fa-user"></i> Personal</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" id="addGoalBtn"><i class="fas fa-plus"></i> Add Goal</button>
+                        </form>
+                    </div>
+                    
+                    <div class="goals-right">
+                        <h3>Today's Goals <span class="goals-count">(0)</span></h3>
+                        
+                        <div class="goals-list">
+                            <!-- Goals will be added here by JavaScript -->
+                        </div>
+                        
+                        <div class="goals-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span id="completedGoals">0</span> of <span id="totalGoals">0</span> goals completed
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

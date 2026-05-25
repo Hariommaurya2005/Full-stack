@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2e2b2b;
+}
+h1{
+    font-size: 400px;
+    text-transform: capitalize;
+    font-weight:lighter;
+    color:white;
+    margin-bottom: 20px;
+}
