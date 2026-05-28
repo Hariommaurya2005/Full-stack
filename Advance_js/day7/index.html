@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <form id="form">
+
+        <input type="text" id="name" placeholder="Enter your name">
+        <small id="nameError"></small>
+
+        <input type="email" id="email" placeholder="Enter your email">
+        <small id="emailError"></small>
+
+        <input type="password" id="password" placeholder="Enter your password">
+        <small id="passwordError"></small>
+
+        <select id="country">
+            <option value="">Select your country</option>
+            <option value="usa">USA</option>
+            <option value="india">India</option>
+            <option value="uk">UK</option>
+        </select>
+        <small id="countryError"></small>
+
+        <textarea id="message" placeholder="Enter your message"></textarea>
+        <small id="messageError"></small>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script src="index.js"></script>
+
+</body>
+</html>

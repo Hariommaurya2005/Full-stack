@@ -1,0 +1,63 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+/* Light Mode */
+body.light{
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+/* Dark Mode */
+body.dark{
+  background-color: #111827;
+  color: white;
+}
+
+.container{
+  text-align: center;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h1{
+  margin-bottom: 15px;
+}
+
+p{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+button{
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Button in Light Mode */
+body.light button{
+  background-color: #111827;
+  color: white;
+}
+
+/* Button in Dark Mode */
+body.dark button{
+  background-color: white;
+  color: #111827;
+}
